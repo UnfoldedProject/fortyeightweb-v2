@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.fortyeightweb.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
