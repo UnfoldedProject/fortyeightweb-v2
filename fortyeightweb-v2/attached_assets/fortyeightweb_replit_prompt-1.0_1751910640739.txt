@@ -1,0 +1,222 @@
+**GOD-LIKE PROMPT for Replit AI Agent**  
+**Project Title:** FortyEight Web 2.0 — Sprint Build Site + CRM + Lead Automation  
+**Platform:** Replit (React + TailwindCSS + Routing + Custom Logic + Airtable + Stripe)
+
+---
+
+### 🚀 **MISSION OBJECTIVE**
+Build a high-performance, SEO-optimized, visually striking website for **FortyEightWeb** — the digital sprint build service and automation agency. This website will showcase sprint offers, automate lead capture, integrate payment and CRM logic, and serve as the conversion-first digital storefront for all FortyEightWeb projects.
+
+---
+
+### 🌍 SEO + INDEXING REQUIREMENTS
+- Must be fully crawlable and indexed by Google and major search engines
+- Implement meta titles and descriptions per page
+- Use semantic HTML5 with ARIA landmarks for accessibility
+- Generate a sitemap.xml and robots.txt automatically
+- Open Graph meta tags for social previews
+- JSON-LD schema markup for:
+  - Local business
+  - Product/service listings
+  - Articles/blog (optional for future use)
+
+---
+
+### 📁 FILE STRUCTURE REQUIREMENTS
+```
+/public
+  - favicon.ico (provided) (fortyeightweb.ico)
+  - logo-light.png (provided) (fortyeightlight.png)
+  - logo-dark.png (provided) (fortyeightdark.png)
+  - examples/
+     - creatorpractice.png
+     - coachroleplay.png
+     - automatefortyeight.png
+     - byondrx.png
+     - leadgenie.png (coming soon)
+/src
+  - pages/
+     - Home.jsx
+     - Services.jsx
+     - Portfolio.jsx
+     - About.jsx
+     - Contact.jsx
+     - ThankYou.jsx
+  - components/
+     - Navbar.jsx
+     - Footer.jsx
+     - OfferCard.jsx
+     - TestimonialBlock.jsx
+     - PortfolioGallery.jsx
+     - AirtableForm.jsx
+     - StripeButton.jsx
+     - LeadRouter.jsx
+     - SEO.jsx
+  - utils/
+     - airtable.js
+     - stripe.js
+     - metadata.js
+```
+
+---
+
+### 🏠 HOMEPAGE DESIGN visit current: https://www.fortyeightweb.com/ for reference only. We need a brand new more dynamic site. 
+- Hero section with tagline: **"Sites built in 48 hours. Built to perform."**
+- CTA buttons: ["Book Sprint Call"] ["View Portfolio"]
+- Offer Summary Grid:
+  - Starter – $250
+  - Standard – $500
+  - Advanced – Starting at $750
+- Add-Ons block: Display optional upsells with logic that changes the delivery timeframe
+- Visual Proof: Logos, mini screenshots, and visual previews from /public/examples
+- Social Strip: LinkedIn, GitHub, Upwork, Dev.to
+- Logos: Use light version on white BG, dark version on footer or hero
+- mail-to: (also on contact page and everywhere email is present) - ops@fortyeightweb.com
+
+---
+
+### 📆 SERVICES PAGE 
+- Sprint Site Builds:
+  - Starter ($250) – 1 Page / 48hrs
+  - Standard ($500) – 3 Pages / 48hrs (Add-ons may add +1 day)
+  - Advanced (Starting at $750) – 96hrs or more based on scope
+- AI Logic Builds:
+  - Coach RolePlay AI - Sales, Marketing, Interview, and Public Speaking Coach.
+  - Ghost Coach AI - Instant feedback Coach that lives anywhere you need assesments. 
+  - Talent & Recruitment AI Bot (in production) - Analyzes candidates based on their resume, application, social links, etc to determine their fit with the inputted job & company description. 
+  - Strength Coach for Creators AI - creatorpractice.com (pointers for creators. Skill assesment and guidance)
+  - Automate FortyEight AI ← lives: https://www.fortyeightweb.com/automate-console . Can turn any prompt request into an automation sequence that can then be wired in either n8n, zapier, or make.com
+  - LeadGenie FortyEight AI (coming soon) - This isn't finished yet. Lead scraper and automation DB. 
+- Automation Systems:
+  - Zapier / Make / n8n (list when available)
+  - CRM routing, webhook automation, dashboard builds
+
+---
+
+### 📊 PORTFOLIO PAGE
+- Image cards + mini-case study per project (Creator Practice, Coach RolePlay, Automate FortyEight)
+- Testimonials: Smart, believable client quotes that show real-world utility
+- Visual previews pulled from /public/examples
+- Optional slider or grid
+
+---
+
+### 🤝 ABOUT PAGE
+- Brief origin story of FortyEightWeb
+- Founder-focused: Built for founders, by a founder
+- Values: Speed, precision, automation, and conversion-driven design
+- Invite to connect via Slack Team FortyEight
+
+---
+
+### 💌 CONTACT PAGE
+- Airtable Form Embed (can be inline or iframe)
+- Embedded Calendly link for calls
+- Contact logic: All form submissions go to Airtable DB (leads view)
+- Confirmation redirects to /thank-you
+- mail-to: (also on contact page and everywhere email is present) - ops@fortyeightweb.com
+
+---
+
+### 🌐 SEO OPTIMIZATION SETTINGS
+- Title and meta for every page via custom SEO.jsx
+- Robots.txt enabled
+- Canonical links
+- OG tags for every major page (especially homepage and services)
+- Dynamic metadata.js file for extensible SEO control
+- We need local - 45150 or Cincinnati, Ohio. Plus, the Nation to know we exist!!
+
+---
+
+### 🧰 STRIPE INTEGRATION
+- Use **Live Stripe Buttons**
+  - Starter ($250)
+  - Standard ($500)
+  - Advanced (Custom quote intake only)
+- Add-ons logic: Add page charges or time modifiers
+- Confirmation email setup optional, or thank you screen with Airtable log
+- All Stripe purchases logged to Airtable DB with project metadata
+
+---
+
+### 🔗 AIRTABLE CRM SYSTEM - This will eventually be moved to auryon.io - my personal CRM in development)
+- CRM Table Fields:
+  - Name
+  - Email
+  - Project Type (Starter, Standard, Advanced)
+  - Add-ons
+  - Purchase Time
+  - Estimated Delivery Time
+  - Status (Lead, In Progress, Delivered)
+- Airtable view logic:
+  - Leads View
+  - In Progress View
+  - Completed View
+- Integrate with site form + Stripe metadata webhook
+
+---
+
+### 🤖 LEADGEN BOT + FORM ROUTER (this needs to be amazing! This is how we wow our client before they are our client.)
+- LeadRouter.jsx logic should:
+  - Ask user qualifying questions (site purpose, # pages, AI needs)
+  - Show recommended plan (Starter, Standard, Advanced)
+  - Log submission to Airtable
+  - Optional future: Feed into Ghost Coach for quote estimation logic. Our AI team will train each other during weekly meetings in the future. This will create a new AI Evolution.
+
+---
+
+### 🚀 FUTURE FEATURE PLACEHOLDERS (Only build if you feel we are able to do so. If not, we can come back to this. I want it all)
+- /client-portal (route, no content yet)
+- /blog (route, optional CMS or Medium embed)
+- Asset dashboard for paid clients (Airtable or GDrive link delivery)
+- Webhook to Slack for Team FortyEight channel upon lead capture
+
+---
+
+### 🌟 DESIGN SYSTEM
+- Tailwind CSS custom theme:
+```js
+colors: {
+  primary: '#68C3D4',
+  secondary: '#1F2B3C',
+  accent: '#1AB6B7',
+  blue: '#2A74F6',
+  background: '#FFFFFF',
+  text: '#3A3A3A',
+  glow: '#BEE3E7',
+}
+```
+- Typography:
+  - Headers: Plus Jakarta Sans or Inter
+  - Body: Inter or system-ui
+- Layout:
+  - Modular sections
+  - Rounded cards
+  - Button styling consistent with brand colors
+
+---
+
+### 🌐 DEPLOYMENT SETTINGS
+- Initial Replit build preview
+- Set for public visibility
+- Set to connect to `fortyeightweb.com` domain once tested
+- Optional future: Move to Vercel if needed for edge functions
+
+---
+
+### ✅ FINAL CHECKLIST
+- Fully mobile-optimized
+- Load speed under 2.5s
+- Visible on Google within 3 days (submit sitemap)
+- Index local + national by embedding local business schema
+- Embed favicon from public folder
+- Use both logo variants appropriately
+- Respect brand palette, never use default Tailwind colors unless overridden
+
+---
+
+Once complete, validate SEO via Lighthouse and manually submit URL to Google Search Console.
+
+This prompt includes everything needed to launch the new FortyEightWeb site and backend logic system. If Replit AI Agent has further questions or breaks functionality, regenerate based on this master spec.
+
+We build this once — and we build it right.

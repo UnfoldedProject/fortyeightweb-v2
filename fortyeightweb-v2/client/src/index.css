@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar hiding */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 22%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 22%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 22%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(186, 64%, 61%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(181, 75%, 40%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(186, 64%, 61%);
+  --radius: 0.5rem;
+  
+  /* FortyEightWeb Brand Colors */
+  --fw-primary: hsl(186, 64%, 61%);
+  --fw-secondary: hsl(210, 47%, 21%);
+  --fw-accent: hsl(181, 75%, 40%);
+  --fw-blue: hsl(220, 91%, 56%);
+  --fw-text: hsl(0, 0%, 22%);
+  --fw-glow: hsl(186, 64%, 91%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(186, 64%, 61%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-jakarta;
+  }
+}
+
+@layer components {
+  .fw-primary {
+    @apply bg-[hsl(186,64%,61%)] text-white;
+  }
+  
+  .fw-secondary {
+    @apply bg-[hsl(210,47%,21%)] text-white;
+  }
+  
+  .fw-accent {
+    @apply bg-[hsl(181,75%,40%)] text-white;
+  }
+  
+  .fw-blue {
+    @apply bg-[hsl(220,91%,56%)] text-white;
+  }
+  
+  .fw-text {
+    @apply text-[hsl(0,0%,22%)];
+  }
+  
+  .fw-glow {
+    @apply bg-[hsl(186,64%,91%)];
+  }
+}
+
+@layer utilities {
+  .font-jakarta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
